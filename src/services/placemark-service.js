@@ -77,6 +77,15 @@ export class PlacemarkService {
     }
   }
 
+  async getUsers() {
+    try {
+      const response = await axios.get(this.baseUrl + "/api/users");
+      return response.data
+    } catch (error) {
+      return [];
+    }
+  }
+
   async getCragById(_id) {
     try {
       const response = await axios.get(this.baseUrl + "/api/crags/" + _id);

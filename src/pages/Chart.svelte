@@ -3,6 +3,7 @@
     import MainNavigator from "../components/MainNavigator.svelte";
     import RoutesByGrade from "../components/RoutesByGrade.svelte";
     import RoutesByCrag from "../components/RoutesByCrag.svelte";
+    import RoutesPerUser from "../components/RoutesPerUser.svelte";
     import Footer from "../components/Footer.svelte";
 
 </script>
@@ -23,5 +24,10 @@
     <div class="column has-text-centered">
       <RoutesByCrag/>
     </div>
+    <div class="columns">
+      <div class="column has-text-centered">
+        <RoutesPerUser/>
+      </div>
+      </div>
   </div>
   <Footer/>
