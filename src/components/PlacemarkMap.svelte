@@ -17,8 +17,6 @@
     onMount(async () => {
         map = new LeafletMap("placemark-map", mapConfig);
         map.showZoomControl();
-        map.showLayerControl();
-        map.addLayerGroup('All Routes');
         map.addLayerGroup('Diff');
         map.addLayerGroup('V Diff');
         map.addLayerGroup('Severe');
@@ -32,6 +30,7 @@
         map.addLayerGroup('E5');
         map.addLayerGroup('E6');
         map.addLayerGroup('E7');
+        map.showLayerControl();
                 
         const routes = await placemarkService.getRoutes();
         routes.forEach(route => {
@@ -66,7 +65,7 @@
         } else if (route.grade =='E6') { 
             map.addMarker({lat: route.lat, lng: route.lng, grade: route.grade}, routeStr, "E6");
         } else if (route.grade =='E7') {  
-            map.addMarker({lat: route.lat, lng: route.lng, grade: route.grade}, routeStr, "E7");
+            map.addMarker({lat: route.lat, lng: route.lng, grade: route.grade}, routeStr, "E7");          
         } 
         map.moveTo(11, {lat: route.lat, lng: route.lng});
     }
