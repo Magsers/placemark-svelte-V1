@@ -73,7 +73,8 @@ export class LeafletMap {
     let group = {};
     let marker = L.marker([location.lat, location.lng]);
     if (popupText) {
-      var popup = L.popup({autoClose: false, closeOnClick: false});
+      var popup = L.popup({autoClose: true, closeOnClick: false});
+      // var popup = L.popup({autoClose: false, closeOnClick: false});
       popup.setContent(popupText);
       marker.bindPopup(popup);
     }

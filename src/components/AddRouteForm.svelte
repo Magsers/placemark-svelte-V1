@@ -9,6 +9,7 @@
   let lat = 52.160858;
   let lng = -7.15242;
   let height = "";
+  let description = "";
   let cragList = [];
   let selectedCrag = "";
   let grades = [
@@ -75,6 +76,8 @@
       type="string"
     />
   </div>
+  <div class="field is-horizontal">
+    <div class="container is-fluid">
   <div class="field">
     <label class="label" for="route">Height (m) </label>
     <input
@@ -85,7 +88,22 @@
       type="string"
     />
   </div>
+  </div>
 
+
+  <div class="field">
+    <div class="container is-fluid">
+    <label class="label" for="route">Description </label>
+    <input
+      bind:value={description}
+      class="input"
+      id="description"
+      name="description"
+      type="string"
+    />
+  </div>
+  </div>
+</div>
   <div class="field is-horizontal">
     <div class="container is-fluid">
       <div class="field">
