@@ -1,6 +1,8 @@
 import axios from "axios";
 import {user} from "../stores.js"
 
+// baseUrl = "http://localhost:4000";
+
 export class PlacemarkService {
   baseUrl = "https://infinite-eyrie-16203.herokuapp.com";
 
