@@ -11,7 +11,7 @@
   import Map from "./pages/Map.svelte";
   import Chart from "./pages/Chart.svelte";
 
-  setContext("PlacemarkService", new PlacemarkService("http://localhost:4000"));
+  setContext("PlacemarkService", new PlacemarkService("https://infinite-eyrie-16203.herokuapp.com"));
 
   let routes = {
     "/": Main,
