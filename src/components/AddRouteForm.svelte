@@ -43,6 +43,7 @@
         name: routeClimbed,
         grade: selectedGrade,
         height: height,
+        description: description,
         crag: crag._id,
         lat: lat,
         lng: lng,
